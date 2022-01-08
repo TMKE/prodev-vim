@@ -22,7 +22,7 @@ Read the documentation of these plugins to understand and use them.
 - [vim-airline](https://github.com/vim-airline/vim-airline): Configurable tabline/statusline for Vim
 - [indentLine](https://github.com/Yggdroot/indentLine): A vim plugin to display the indention levels with thin vertical lines
 - [nerdtree](https://github.com/preservim/nerdtree): A tree explorer plugin for vim
-- [vim-visula-multi](https://github.com/mg979/vim-visual-multi]: Multiple cursors plugin for vim/neovim
+- [vim-visula-multi](https://github.com/mg979/vim-visual-multi): Multiple cursors plugin for vim/neovim
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter): A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks
 - [vim-commentary](https://github.com/tpope/vim-commentary): A plugin to comment stuff out
 - [vim-surround](https://github.com/tpope/vim-surround): Delete/change/add parentheses/quotes/XML-tags/much more with ease
