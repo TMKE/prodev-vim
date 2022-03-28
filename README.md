@@ -1,5 +1,5 @@
 # The Essential vimrc for Developers
-This Vim configuration contains a basic setup for developers + some useful plugins, remaps and colorschemes that make Vim a lot better.
+This Vim configuration contains a basic setup for developers (a number of handy plugins, keybindings and colorschemes that make your Vim a "pro" editor).
 ## How to install
 Clone the repository:
 ```
@@ -19,7 +19,7 @@ Type the following command inside Vim in order to install plugins:
 <img src="Screenshot_3.png">
 
 ## Included Plugins
-Read the documentation of these plugins to understand and use them.
+To take full advantage of these plugins, you should read the documentation.
 - [limelight.vim](https://github.com/junegunn/limelight.vim): Focus on current paragraphe when writing
 - [coc.nvim](https://github.com/neoclide/coc.nvim): Plugin for autocompletion
 - [vim-airline](https://github.com/vim-airline/vim-airline): Configurable tabline/statusline for Vim
