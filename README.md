@@ -1,12 +1,15 @@
 # The Essential vimrc for Developers
 This Vim configuration contains a basic setup for developers + some useful plugins, remaps and colorschemes that make Vim a lot better.
 ## How to install
-Use the following command:
+Clone the repository:
 ```
 git clone https://github.com/TMKE/pro-vim.git ~/.vim
+```
+Move `.vimrc` file to the `~` directory:
+```
 mv ~/.vim/.vimrc ~/
 ```
-In order for plugins to work, you must type the following command inside Vim:
+Type the following command inside Vim in order to install plugins:
 ```
 :PlugInstall
 ```
