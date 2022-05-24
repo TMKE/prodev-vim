@@ -15,7 +15,6 @@ Type the following command inside Vim in order to install plugins:
 ```
 ## Screenshots
 <img src="Screenshot_1.png">
-<img src="Screenshot_2.png">
 
 ## Included Plugins
 To take full advantage of these plugins, you should read the documentation.
