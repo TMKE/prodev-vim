@@ -1,3 +1,5 @@
+<img src="logo.png">
+
 # The Essential vimrc for Developers
 This Vim configuration contains a basic setup for developers (a number of handy plugins, keybindings and colorschemes that make your Vim a "pro" editor).
 ## How to install
