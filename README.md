@@ -16,7 +16,6 @@ Type the following command inside Vim in order to install plugins:
 ## Screenshots
 <img src="Screenshot_1.png">
 <img src="Screenshot_2.png">
-<img src="Screenshot_3.png">
 
 ## Included Plugins
 To take full advantage of these plugins, you should read the documentation.
@@ -40,23 +39,14 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-styled-components](https://github.com/styled-components/vim-styled-components)
 - [vim-json](https://github.com/elzr/vim-json): JSON syntax highlighting
 - [vim-graphql](https://github.com/jparise/vim-graphql): A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation
+- [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim 
+- [kotlin-vim](https://github.com/udalov/kotlin-vim): Kotlin plugin for Vim
 ## Included Colorschemes
-- [vim-monokai](https://github.com/sickill/vim-monokai)
+- [blackbirdtheme](https://github.com/blackbirdtheme/vim) (default)
+- [srcery-vim](https://github.com/srcery-colors/srcery-vim)
+- [vim-brogrammer-theme](https://github.com/marciomazza/vim-brogrammer-theme)
 - [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty)
-- [molokai](https://github.com/tomasr/molokai)
-- [molokayo](https://github.com/fmoralesc/molokayo)
-- [vim-open-color](https://github.com/yous/vim-open-color)
-- [peaksea](https://github.com/vim-scripts/peaksea)
-- [vim-kalisi](https://github.com/freeo/vim-kalisi)
-- [spacecamp](https://github.com/jaredgorski/spacecamp)
-- [vim-sunbather](https://github.com/nikolvs/vim-sunbather)
-- [tender.vim](https://github.com/jacoborus/tender.vim) (default)
-- [sonokai](https://github.com/sainnhe/sonokai)
-- [gruvbox-material](https://github.com/sainnhe/gruvbox-material)
-- [meta5](https://github.com/christophermca/meta5)
-- [vim-github-colorscheme](https://github.com/endel/vim-github-colorscheme)
-- [vim-deep-space](https://github.com/tyrannicaltoucan/vim-deep-space)
-- [vim-theme-papaya](https://github.com/HenryNewcomer/vim-theme-papaya)
+- [tender.vim](https://github.com/jacoborus/tender.vim)
 ## Key Mappings
 ### Normal Mode
 - The leader key (`<leader>`) is remaped to `,` instead of `\`.
