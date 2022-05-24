@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/limelight.vim'
 
 " Autocompletion wit TabNine
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'vim-airline/vim-airline'
 
@@ -78,22 +78,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 
 " Colorschemes
-Plug 'sickill/vim-monokai' " monokai
-Plug 'patstockwell/vim-monokai-tasty' " vim_monokai_tasty_italic
-Plug 'tomasr/molokai' " molokai
-Plug 'fmoralesc/molokayo' " molokayo
-Plug 'yous/vim-open-color' " open-color
-Plug 'vim-scripts/peaksea' " peaksea
-Plug 'freeo/vim-kalisi' " kalisi
-Plug 'jaredgorski/spacecamp' " spacecamp or spacecamp_lite (good one)
-Plug 'nikolvs/vim-sunbather' "sunbather
+Plug 'blackbirdtheme/vim' " blackbird
+Plug 'srcery-colors/srcery-vim' " srcery ***
+Plug 'marciomazza/vim-brogrammer-theme' " brogrammer ***
+Plug 'patstockwell/vim-monokai-tasty' " vim_monokai_tasty_italic ***
 Plug 'jacoborus/tender.vim' " tender
-Plug 'sainnhe/sonokai' " :help sonokai-configuration
-Plug 'sainnhe/gruvbox-material'
-Plug 'christophermca/meta5' " meta5
-Plug 'endel/vim-github-colorscheme' " github
-Plug 'tyrannicaltoucan/vim-deep-space' " deep-space
-Plug 'HenryNewcomer/vim-theme-papaya' " papaya
 
 " TypeScript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim'
@@ -108,6 +97,10 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
 Plug 'elzr/vim-json'
 Plug 'jparise/vim-graphql'
+
+
+Plug 'fatih/vim-go'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
@@ -128,24 +121,29 @@ set background=dark
 " Set contrast.
 " This configuration option should be placed before `colorscheme gruvbox-material`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'medium'
-let g:everforest_background = 'hard'
 
-let g:sonokai_style = 'andromeda'
+let g:solarized_termcolors=256
+
+let g:gruvbox_material_background = 'hard'
+
+let g:gruvbox_italic = 1
+let g:gruvbox_bold = 1
+let g:gruvbox_transparent_bg = 1
+let g:gruvbox_contrast_dark = 'hard'
+
+let g:srcery_italic = 1
+
+let g:sonokai_style = 'maia'
 let g:sonokai_enable_italic = 0
 let g:sonokai_disable_italic_comment = 0
 
-let g:edge_style = 'aura'
-let g:edge_enable_italic = 1
-let g:edge_disable_italic_comment = 1
-
 let g:deepspace_italics=1
-let g:sublimemonokai_term_italic = 1
 let g:vim_monokai_tasty_italic = 1
-let g:molokai_original = 1
 
-colorscheme tender
-let g:airline_theme='github'
+colorscheme blackbird
+let g:airline_theme='srcery'
+" let g:airline#extensions#tabline#enabled = 1
+
 
 " Make comments italic
 highlight Comment cterm=italic gui=italic
@@ -203,29 +201,44 @@ set wildmenu
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 
-" Shift left
-inoremap <S-Tab> <C-d>
+
+
+set ignorecase
+set smartcase " when searching: if it is all lowercase, it matches all combinations of lowercase and uppercase, else, it matches the specified word
 
 " Remapping leader (i.e. '\') to ','
 let mapleader = ","
 
 
 map <leader>tn :tabnew<cr>
-map <leader>t<leader> :tabnext
+map <leader>t<leader> :tabnext<cr>
 map <leader>tm :tabmove
 map <leader>tc :tabclose<cr>
 map <leader>to :tabonly<cr>
 
-set ignorecase
-set smartcase " when searching: if it is all lowercase, it matches all combinations of lowercase and uppercase, else, it matches the specified word
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
+
+
+" Shift left
+inoremap <S-Tab> <C-d>
 
 " Yank till the end of the line
 nnoremap Y y$
 
 " Moving text
-vnoremap J :m '>+1<CR>gv=gv
+" Move line up/down in visual mode using K/J
 vnoremap K :m '<-2<CR>gv=gv
-inoremap <C-j> <esc>:m .+1<CR>==
+vnoremap J :m '>+1<CR>gv=gv 
+" Move line up/down in insert mode using Ctrl+k/j
 inoremap <C-k> <esc>:m .-2<CR>==
+inoremap <C-j> <esc>:m .+1<CR>==
+" Move line(s) up/down in normal mode using leader+k/j
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
