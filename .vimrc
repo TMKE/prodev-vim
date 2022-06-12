@@ -6,7 +6,13 @@ Plug 'junegunn/limelight.vim'
 " Autocompletion wit TabNine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
+
+" Plug 'vim-airline/vim-airline'
+
+" Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+" Plug 'kyazdani42/nvim-web-devicons'
 
 " display the indentation levels with thin vertical lines
 Plug 'Yggdroot/indentLine'
@@ -83,6 +89,13 @@ Plug 'srcery-colors/srcery-vim' " srcery ***
 Plug 'marciomazza/vim-brogrammer-theme' " brogrammer ***
 Plug 'patstockwell/vim-monokai-tasty' " vim_monokai_tasty_italic ***
 Plug 'jacoborus/tender.vim' " tender
+Plug 'fcpg/vim-fahrenheit' " fahrenheit
+Plug 'fcpg/vim-orbital' " orbital
+Plug 'fxn/vim-monochrome' " monochrome
+Plug 'jdsimcoe/hyper.vim' " hyper
+Plug 'noahfrederick/vim-hemisu' " hemisu
+Plug 'lucasprag/simpleblack' " simpleblack
+
 
 " TypeScript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim'
@@ -140,9 +153,48 @@ let g:sonokai_disable_italic_comment = 0
 let g:deepspace_italics=1
 let g:vim_monokai_tasty_italic = 1
 
-colorscheme blackbird
+let g:monochrome_italic_comments = 1
+
+colorscheme simpleblack
 let g:airline_theme='srcery'
 " let g:airline#extensions#tabline#enabled = 1
+
+
+set laststatus=2
+set noshowmode
+let g:lightline = { 'colorscheme': 'simpleblack', }
+
+" lua << END
+" require('lualine').setup {
+"   options = {
+"     icons_enabled = true,
+"     theme = 'auto',
+"     component_separators = { left = '', right = ''},
+"     section_separators = { left = '', right = ''},
+"     disabled_filetypes = {},
+"     always_divide_middle = true,
+"     globalstatus = false,
+"   },
+"   sections = {
+"     lualine_a = {'mode'},
+"     lualine_b = {'branch', 'diff', 'diagnostics'},
+"     lualine_c = {'filename'},
+"     lualine_x = {'encoding', 'fileformat', 'filetype'},
+"     lualine_y = {'progress'},
+"     lualine_z = {'location'}
+"   },
+"   inactive_sections = {
+"     lualine_a = {},
+"     lualine_b = {},
+"     lualine_c = {'filename'},
+"     lualine_x = {'location'},
+"     lualine_y = {},
+"     lualine_z = {}
+"   },
+"   tabline = {},
+"   extensions = {}
+" }
+" END
 
 
 " Make comments italic
@@ -242,3 +294,6 @@ inoremap <C-j> <esc>:m .+1<CR>==
 " Move line(s) up/down in normal mode using leader+k/j
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>j :m .+1<CR>==
+
+" Move between splits using leader+w
+nnoremap <leader>w <C-w>

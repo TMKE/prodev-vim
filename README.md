@@ -1,4 +1,8 @@
-# The Essential vimrc for Developers
+
+<img src="logo.png" width=25%>
+
+<h1 align="center">The Essential vimrc for Developers</h1>
+
 This Vim configuration contains a basic setup for developers (a number of handy plugins, keybindings and colorschemes that make your Vim a "pro" editor).
 ## How to install
 Clone the repository:
@@ -20,7 +24,7 @@ Type the following command inside Vim in order to install plugins:
 To take full advantage of these plugins, you should read the documentation.
 - [limelight.vim](https://github.com/junegunn/limelight.vim): Focus on current paragraphe when writing
 - [coc.nvim](https://github.com/neoclide/coc.nvim): Plugin for autocompletion
-- [vim-airline](https://github.com/vim-airline/vim-airline): Configurable tabline/statusline for Vim
+- [lightline.vim](https://github.com/itchyny/lightline.vim): Add lightline status line
 - [indentLine](https://github.com/Yggdroot/indentLine): A vim plugin to display the indention levels with thin vertical lines
 - [nerdtree](https://github.com/preservim/nerdtree): A tree explorer plugin for vim
 - [vim-visula-multi](https://github.com/mg979/vim-visual-multi): Multiple cursors plugin for vim/neovim
@@ -41,25 +45,32 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim 
 - [kotlin-vim](https://github.com/udalov/kotlin-vim): Kotlin plugin for Vim
 ## Included Colorschemes
-- [blackbirdtheme](https://github.com/blackbirdtheme/vim) (default)
+- [blackbirdtheme](https://github.com/blackbirdtheme/vim)
 - [srcery-vim](https://github.com/srcery-colors/srcery-vim)
 - [vim-brogrammer-theme](https://github.com/marciomazza/vim-brogrammer-theme)
 - [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty)
 - [tender.vim](https://github.com/jacoborus/tender.vim)
+- [fahrenheit](https://github.com/fcpg/vim-fahrenheit)
+- [orbital](https://github.com/fcpg/vim-orbital)
+- [monochrome](https://github.com/fxn/monochrome)
+- [hyper.vim](https://github.com/jdsimcoe/hyper.vim)
+- [vim-hemisu](https://github.com/noahfrederick/vim-hemisu)
+- [simpleblack](https://github.com/lucasprag/simpleblack) (default)
 ## Key Mappings
 ### Normal Mode
 - The leader key (`<leader>`) is remaped to `,` instead of `\`.
-- Use `F5` to toggle NERDTree
-- Use backspace to delete characters behind the cursor
-- Use `Tab` to indent and `Tab`+`Shift` to unindent
-- Use `Y` to yank from the current position until the end of the line (equivalent of `y$`)
-- `<leader>` (i.e. `,`) then `tn` to open a new tab (instead of `:tabnew`)
-- `<leader>`, `t` then `<leader` again to move to the next tab (instead of `:tabnext`)
-- `<leader>` then `tm` to move a tab (instead of `:tabmove`)
-- `<leader>` then `tc` to close a tab (instead of `:tabclose`)
-- `<leader>` then `to` to close all tab pages except the current one (instead of `:tabonly`)
-- `<leader>` then `K`/`J` to move current line up/down
+- `F5`: toggle NERDTree
+- `Backspace`: delete characters behind the cursor
+- `Tab`: indent (`Tab`+`Shift` to unindent)
+- `Y`: yank from the current position until the end of the line (equivalent of `y$`)
+- `<leader>` (i.e. `,`) then `tn`: open a new tab (instead of `:tabnew`)
+- `<leader>`, `t` then `<leader` again: move to the next tab (instead of `:tabnext`)
+- `<leader>` then `tm`: move a tab (instead of `:tabmove`)
+- `<leader>` then `tc`: close a tab (instead of `:tabclose`)
+- `<leader>` then `to`: close all tab pages except the current one (instead of `:tabonly`)
+- `<leader>` then `k`/`j`: move current line up/down
+- `<leader>` then `w`: move between splits
 ### Visual Mode
-- Use `K`/`J` to move the current line (or multiple lines selected) up/down
+- `K`/`J`: move the current line (or multiple lines selected) up/down
 ### Insert Mode
-- Use `Ctrl`+`k`/`j` to move current line up/down
+- `Ctrl`+`k`/`j`: move current line up/down
