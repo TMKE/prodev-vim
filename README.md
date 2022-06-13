@@ -1,4 +1,3 @@
-
 <img src="logo.png" width=25%>
 
 <h1 align="center">The Essential vimrc for Developers</h1>
