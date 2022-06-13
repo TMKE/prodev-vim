@@ -1,4 +1,6 @@
-<img src="logo.png" width=25%>
+<p align=center>
+	<img src="logo.png" width=25%>
+</p>
 
 <h1 align="center">The Essential vimrc for Developers</h1>
 
