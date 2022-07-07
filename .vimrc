@@ -89,13 +89,15 @@ Plug 'srcery-colors/srcery-vim' " srcery ***
 Plug 'marciomazza/vim-brogrammer-theme' " brogrammer ***
 Plug 'patstockwell/vim-monokai-tasty' " vim_monokai_tasty_italic ***
 Plug 'jacoborus/tender.vim' " tender
-Plug 'fcpg/vim-fahrenheit' " fahrenheit
-Plug 'fcpg/vim-orbital' " orbital
-Plug 'fxn/vim-monochrome' " monochrome
-Plug 'jdsimcoe/hyper.vim' " hyper
-Plug 'noahfrederick/vim-hemisu' " hemisu
+Plug 'sainnhe/sonokai' " sonokai
+Plug 'ghifarit53/tokyonight-vim' " tokyonight
 Plug 'lucasprag/simpleblack' " simpleblack
+Plug 'noahfrederick/vim-hemisu' " hemisu
+Plug 'Lokaltog/vim-distinguished' " distinguished
+Plug 'aonemd/kuroi.vim' " kuroi
 
+" Language pack
+Plug 'sheerun/vim-polyglot'
 
 " TypeScript syntax highlighting
 Plug 'HerringtonDarkholme/yats.vim'
@@ -110,10 +112,17 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'styled-components/vim-styled-components'
 Plug 'elzr/vim-json'
 Plug 'jparise/vim-graphql'
-
-
 Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
+
+" Smooth scrolling
+Plug 'psliwka/vim-smoothie'
+
+" Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
+" Auto close HTML tags
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
@@ -131,71 +140,44 @@ set termguicolors
 " Set colorscheme
 set background=dark
 
-" Set contrast.
-" This configuration option should be placed before `colorscheme gruvbox-material`.
-" Available values: 'hard', 'medium'(default), 'soft'
+" tokyonight colorscheme configuration
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
+let g:tokyonight_current_word = 'underline' " available: bold, underline, italic, grey background
+let g:tokyonight_disable_italic_comment = 0
 
-let g:solarized_termcolors=256
-
-let g:gruvbox_material_background = 'hard'
-
-let g:gruvbox_italic = 1
-let g:gruvbox_bold = 1
-let g:gruvbox_transparent_bg = 1
-let g:gruvbox_contrast_dark = 'hard'
-
+" srcery colorscheme configuration
 let g:srcery_italic = 1
+let g:srcery_bold = 1
+let g:srcery_underline = 1
+let g:srcery_bg_passthrough = 1
+let g:srcery_hard_black_terminal_bg = 1
 
-let g:sonokai_style = 'maia'
-let g:sonokai_enable_italic = 0
+" sonokai colorscheme configuration
+let g:sonokai_style = 'andromeda' " available: default, atlantis, andromeda, shusia, maia, espresso
+let g:sonokai_better_performance = 1
+let g:sonokai_enable_italic = 1
+let g:sonokai_transparent_background = 1 " available: 0, 1, 2
+let g:sonokai_diagnostic_text_highlight = 1
+let g:sonokai_diagnostic_line_highlight = 1
+let g:sonokai_current_word = 'underline' " available: bold, underline, italic, grey background
+let g:sonokai_disable_terminal_colors = 0
 let g:sonokai_disable_italic_comment = 0
 
-let g:deepspace_italics=1
+" Other colorschemes configurations
 let g:vim_monokai_tasty_italic = 1
 
-let g:monochrome_italic_comments = 1
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
-colorscheme simpleblack
-let g:airline_theme='srcery'
+colorscheme tokyonight
+
+" let g:airline_theme='srcery'
 " let g:airline#extensions#tabline#enabled = 1
-
 
 set laststatus=2
 set noshowmode
-let g:lightline = { 'colorscheme': 'simpleblack', }
-
-" lua << END
-" require('lualine').setup {
-"   options = {
-"     icons_enabled = true,
-"     theme = 'auto',
-"     component_separators = { left = '', right = ''},
-"     section_separators = { left = '', right = ''},
-"     disabled_filetypes = {},
-"     always_divide_middle = true,
-"     globalstatus = false,
-"   },
-"   sections = {
-"     lualine_a = {'mode'},
-"     lualine_b = {'branch', 'diff', 'diagnostics'},
-"     lualine_c = {'filename'},
-"     lualine_x = {'encoding', 'fileformat', 'filetype'},
-"     lualine_y = {'progress'},
-"     lualine_z = {'location'}
-"   },
-"   inactive_sections = {
-"     lualine_a = {},
-"     lualine_b = {},
-"     lualine_c = {'filename'},
-"     lualine_x = {'location'},
-"     lualine_y = {},
-"     lualine_z = {}
-"   },
-"   tabline = {},
-"   extensions = {}
-" }
-" END
-
+let g:lightline = { 'colorscheme': 'tokyonight', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai
 
 " Make comments italic
 highlight Comment cterm=italic gui=italic
