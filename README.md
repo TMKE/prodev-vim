@@ -36,11 +36,11 @@ To take full advantage of these plugins, you should read the documentation.
 - [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder
 - [fzf.vim](https://github.com/junegunn/fzf.vim): A a bundle of fzf-based commands and mappings
 - [ultisnips](https://github.com/SirVer/ultisnips): The ultimate solution for snippets in Vim
-- [vim-smoothie](https://github.com/psliwka/vim-smoothie'): Smooth scrolling in Vim
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs'): Insert or delete brackets, parens, quotes in pair
-- [vim-closetag](https://github.com/alvan/vim-closetag'): Auto close HTML tags
+- [vim-smoothie](https://github.com/psliwka/vim-smoothie): Smooth scrolling in Vim
+- [auto-pairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
+- [vim-closetag](https://github.com/alvan/vim-closetag): Auto close HTML tags
 ### Plugins for syntax highlighting
-- [vim-polyglot](https://github.com/sheerun/vim-polyglot'): Language pack for Vim
+- [vim-polyglot](https://github.com/sheerun/vim-polyglot): Language pack for Vim
 - [yats.vim](https://github.com/HerringtonDarkholme/yats.vim): TypeScript syntax highlighting in Vim
 - [vim-javascript](https://github.com/pangloss/vim-javascript): Improved Javascript indentation and syntax support in Vim
 - [vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty): JSX and TSX syntax pretty highlighting
@@ -55,12 +55,12 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-brogrammer-theme](https://github.com/marciomazza/vim-brogrammer-theme)
 - [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty)
 - [tender.vim](https://github.com/jacoborus/tender.vim)
-- [sonokai](https://github.com/sainnhe/sonokai')
-- [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim') (default)
+- [sonokai](https://github.com/sainnhe/sonokai)
+- [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim) (default)
 - [simpleblack](https://github.com/lucasprag/simpleblack) 
 - [vim-hemisu](https://github.com/noahfrederick/vim-hemisu)
-- [vim-distinguished](https://github.com/Lokaltog/vim-distinguished')
-- [kuroi.vim](https://github.com/aonemd/kuroi.vim')
+- [vim-distinguished](https://github.com/Lokaltog/vim-distinguished)
+- [kuroi.vim](https://github.com/aonemd/kuroi.vim)
 ## Key Mappings
 ### Normal Mode
 - The leader key (`<leader>`) is remaped to `,` instead of `\`.
