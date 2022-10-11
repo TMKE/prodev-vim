@@ -1,5 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
+" Flutter for vim
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+
 " Focus on current paragraph
 Plug 'junegunn/limelight.vim'
 
@@ -93,8 +97,6 @@ Plug 'sainnhe/sonokai' " sonokai
 Plug 'ghifarit53/tokyonight-vim' " tokyonight
 Plug 'lucasprag/simpleblack' " simpleblack
 Plug 'noahfrederick/vim-hemisu' " hemisu
-Plug 'Lokaltog/vim-distinguished' " distinguished
-Plug 'aonemd/kuroi.vim' " kuroi
 
 " Language pack
 Plug 'sheerun/vim-polyglot'
@@ -124,6 +126,10 @@ Plug 'jiangmiao/auto-pairs'
 " Auto close HTML tags
 Plug 'alvan/vim-closetag'
 
+" Markdown vim mode
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+
 call plug#end()
 
 map <F5> :NERDTreeToggle<CR>
@@ -133,6 +139,16 @@ map <BS> X
 
 let g:limelight_conceal_ctermfg = 0
 let g:VM_use_first_cursor_in_line = 1
+
+" markdown plugin configuration
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
 
 " 256 colors
 set termguicolors
@@ -170,14 +186,14 @@ let g:vim_monokai_tasty_italic = 1
 
 " autocmd CursorHold * silent call CocActionAsync('highlight')
 
-colorscheme tokyonight
+colorscheme tender
 
 " let g:airline_theme='srcery'
 " let g:airline#extensions#tabline#enabled = 1
 
 set laststatus=2
 set noshowmode
-let g:lightline = { 'colorscheme': 'tokyonight', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai
+let g:lightline = { 'colorscheme': 'tender', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai, landscape
 
 " Make comments italic
 highlight Comment cterm=italic gui=italic
@@ -243,6 +259,9 @@ set smartcase " when searching: if it is all lowercase, it matches all combinati
 " Remapping leader (i.e. '\') to ','
 let mapleader = ","
 
+" For Alacritty terminal
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 map <leader>tn :tabnew<cr>
 map <leader>t<leader> :tabnext<cr>
