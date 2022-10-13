@@ -97,6 +97,8 @@ Plug 'sainnhe/sonokai' " sonokai
 Plug 'ghifarit53/tokyonight-vim' " tokyonight
 Plug 'lucasprag/simpleblack' " simpleblack
 Plug 'noahfrederick/vim-hemisu' " hemisu
+Plug 'joshdick/onedark.vim' " onedark
+Plug 'phanviet/vim-monokai-pro' " monokai_pro
 
 " Language pack
 Plug 'sheerun/vim-polyglot'
@@ -186,14 +188,14 @@ let g:vim_monokai_tasty_italic = 1
 
 " autocmd CursorHold * silent call CocActionAsync('highlight')
 
-colorscheme tender
+colorscheme onedark
 
 " let g:airline_theme='srcery'
 " let g:airline#extensions#tabline#enabled = 1
 
 set laststatus=2
 set noshowmode
-let g:lightline = { 'colorscheme': 'tender', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai, landscape
+let g:lightline = { 'colorscheme': 'onedark', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai, landscape, onedark, monokai_pro
 
 " Make comments italic
 highlight Comment cterm=italic gui=italic
@@ -298,3 +300,12 @@ nnoremap <leader>j :m .+1<CR>==
 
 " Move between splits using leader+w
 nnoremap <leader>w <C-w>
+
+" Set transparent background
+hi Normal guibg=NONE ctermbg=NONE
+
+let g:indentLine_char = '│'
+
+" Use Tab and Shift+Tab to move between buffers
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>

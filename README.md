@@ -49,6 +49,8 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-graphql](https://github.com/jparise/vim-graphql): A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation
 - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim 
 - [kotlin-vim](https://github.com/udalov/kotlin-vim): Kotlin plugin for Vim
+- [dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin)
+- [vim-flutter](https://github.com/thosakwe/vim-flutter)
 ## Included Colorschemes
 - [blackbirdtheme](https://github.com/blackbirdtheme/vim)
 - [srcery-vim](https://github.com/srcery-colors/srcery-vim)
@@ -56,17 +58,17 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty)
 - [tender.vim](https://github.com/jacoborus/tender.vim)
 - [sonokai](https://github.com/sainnhe/sonokai)
-- [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim) (default)
+- [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim) 
 - [simpleblack](https://github.com/lucasprag/simpleblack) 
 - [vim-hemisu](https://github.com/noahfrederick/vim-hemisu)
-- [vim-distinguished](https://github.com/Lokaltog/vim-distinguished)
-- [kuroi.vim](https://github.com/aonemd/kuroi.vim)
+- [onedark.vim](https://github.com/joshdick/onedark.vim) (default)
+- [vim-monokai-pro](https://github.com/phanviet/vim-monokai-pro)
 ## Key Mappings
 ### Normal Mode
 - The leader key (`<leader>`) is remaped to `,` instead of `\`.
 - `F5`: toggle NERDTree
 - `Backspace`: delete characters behind the cursor
-- `Tab`: indent (`Tab`+`Shift` to unindent)
+- `Tab`: Move between buffers
 - `Y`: yank from the current position until the end of the line (equivalent of `y$`)
 - `<leader>` (i.e. `,`) then `tn`: open a new tab (instead of `:tabnew`)
 - `<leader>`, `t` then `<leader` again: move to the next tab (instead of `:tabnext`)
@@ -79,3 +81,4 @@ To take full advantage of these plugins, you should read the documentation.
 - `K`/`J`: move the current line (or multiple lines selected) up/down
 ### Insert Mode
 - `Ctrl`+`k`/`j`: move current line up/down
+- `Tab`: indent (`Tab`+`Shift` to unindent)
