@@ -68,7 +68,7 @@ To take full advantage of these plugins, you should read the documentation.
 - The leader key (`<leader>`) is remaped to `,` instead of `\`.
 - `F5`: toggle NERDTree
 - `Backspace`: delete characters behind the cursor
-- `Tab`: Move between buffers
+- `Tab`: move between buffers
 - `Y`: yank from the current position until the end of the line (equivalent of `y$`)
 - `<leader>` (i.e. `,`) then `tn`: open a new tab (instead of `:tabnew`)
 - `<leader>`, `t` then `<leader` again: move to the next tab (instead of `:tabnext`)
@@ -77,6 +77,8 @@ To take full advantage of these plugins, you should read the documentation.
 - `<leader>` then `to`: close all tab pages except the current one (instead of `:tabonly`)
 - `<leader>` then `k`/`j`: move current line up/down
 - `<leader>` then `w`: move between splits
+### Command Mode
+- `:w!!`: write to a file using sudo if you forgot to "sudo vim file"
 ### Visual Mode
 - `K`/`J`: move the current line (or multiple lines selected) up/down
 ### Insert Mode

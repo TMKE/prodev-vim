@@ -309,3 +309,6 @@ let g:indentLine_char = '│'
 " Use Tab and Shift+Tab to move between buffers
 nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
 nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR>
+
+" Use :w!! to write to a file using sudo if you forgot to "sudo vim file"
+cmap w!! %!sudo tee > /dev/null %
