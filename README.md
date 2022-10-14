@@ -22,7 +22,7 @@ Type the following command inside Vim in order to install plugins:
 <img src="Screenshot_3.png">
 
 ## Included Plugins
-To take full advantage of these plugins, you should read the documentation.
+To use these plugins correctly, consider reading their documentation
 - [limelight.vim](https://github.com/junegunn/limelight.vim): Focus on current paragraphe when writing
 - [coc.nvim](https://github.com/neoclide/coc.nvim): Plugin for autocompletion
 - [lightline.vim](https://github.com/itchyny/lightline.vim): Add lightline status line
@@ -39,8 +39,9 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-smoothie](https://github.com/psliwka/vim-smoothie): Smooth scrolling in Vim
 - [auto-pairs](https://github.com/jiangmiao/auto-pairs): Insert or delete brackets, parens, quotes in pair
 - [vim-closetag](https://github.com/alvan/vim-closetag): Auto close HTML tags
-### Plugins for syntax highlighting
+- [nnn.vim](https://github.com/mcchrish/nnn.vim): File manager powered by nnn (nnn is required)
 - [vim-polyglot](https://github.com/sheerun/vim-polyglot): Language pack for Vim
+### Plugins for syntax highlighting
 - [yats.vim](https://github.com/HerringtonDarkholme/yats.vim): TypeScript syntax highlighting in Vim
 - [vim-javascript](https://github.com/pangloss/vim-javascript): Improved Javascript indentation and syntax support in Vim
 - [vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty): JSX and TSX syntax pretty highlighting
@@ -49,8 +50,11 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-graphql](https://github.com/jparise/vim-graphql): A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation
 - [vim-go](https://github.com/fatih/vim-go): Go development plugin for Vim 
 - [kotlin-vim](https://github.com/udalov/kotlin-vim): Kotlin plugin for Vim
-- [dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin)
+### Plugins for Flutter
 - [vim-flutter](https://github.com/thosakwe/vim-flutter)
+- [dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin)
+- [vim-lsx](https://github.com/natebosch/vim-lsc)
+- [vim-lsc-dart](https://github.com/natebosch/vim-lsc-dart)
 ## Included Colorschemes
 - [blackbirdtheme](https://github.com/blackbirdtheme/vim)
 - [srcery-vim](https://github.com/srcery-colors/srcery-vim)
@@ -58,11 +62,12 @@ To take full advantage of these plugins, you should read the documentation.
 - [vim-monokai-tasty](https://github.com/patstockwell/vim-monokai-tasty)
 - [tender.vim](https://github.com/jacoborus/tender.vim)
 - [sonokai](https://github.com/sainnhe/sonokai)
-- [tokyonight-vim](https://github.com/ghifarit53/tokyonight-vim) 
 - [simpleblack](https://github.com/lucasprag/simpleblack) 
-- [vim-hemisu](https://github.com/noahfrederick/vim-hemisu)
-- [onedark.vim](https://github.com/joshdick/onedark.vim) (default)
+- [onedark.vim](https://github.com/joshdick/onedark.vim) 
 - [vim-monokai-pro](https://github.com/phanviet/vim-monokai-pro)
+- [vim-deus](https://github.com/ajmwagar/vim-deus) (default)
+- [spacecamp](https://github.com/jaredgorski/spacecamp)
+- [atlas.vim](https://github.com/huyvohcmc/atlas.vim)
 ## Key Mappings
 ### Normal Mode
 - The leader key (`<leader>`) is remaped to `,` instead of `\`.

@@ -1,5 +1,12 @@
 call plug#begin('~/.vim/plugged')
 
+" File manager powered by nnn
+Plug 'mcchrish/nnn.vim' " <Leader>n
+
+" Dart autocompletion
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
 " Flutter for vim
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
@@ -25,7 +32,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree' " F5
 
 " Multiple cursors plugin
-Plug 'mg979/vim-visual-multi'
+" Plug 'mg979/vim-visual-multi'
 " select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
 " create cursors vertically with Ctrl-Down/Ctrl-Up
 " select one character at a time with Shift-Arrows
@@ -94,11 +101,12 @@ Plug 'marciomazza/vim-brogrammer-theme' " brogrammer ***
 Plug 'patstockwell/vim-monokai-tasty' " vim_monokai_tasty_italic ***
 Plug 'jacoborus/tender.vim' " tender
 Plug 'sainnhe/sonokai' " sonokai
-Plug 'ghifarit53/tokyonight-vim' " tokyonight
 Plug 'lucasprag/simpleblack' " simpleblack
-Plug 'noahfrederick/vim-hemisu' " hemisu
 Plug 'joshdick/onedark.vim' " onedark
 Plug 'phanviet/vim-monokai-pro' " monokai_pro
+Plug 'ajmwagar/vim-deus' " deus
+Plug 'jaredgorski/spacecamp' " spacecamp or spacecamp_lite
+Plug 'huyvohcmc/atlas.vim' " atlas
 
 " Language pack
 Plug 'sheerun/vim-polyglot'
@@ -134,7 +142,10 @@ Plug 'preservim/vim-markdown'
 
 call plug#end()
 
+let g:lsc_auto_map = v:true
+
 map <F5> :NERDTreeToggle<CR>
+" map <F5> :CocCommand explorer<CR>
 
 " Use backspace to delete characters behind cursor
 map <BS> X
@@ -188,14 +199,16 @@ let g:vim_monokai_tasty_italic = 1
 
 " autocmd CursorHold * silent call CocActionAsync('highlight')
 
-colorscheme onedark
+colorscheme deus
+
+let g:deus_termcolors=256
 
 " let g:airline_theme='srcery'
 " let g:airline#extensions#tabline#enabled = 1
 
 set laststatus=2
 set noshowmode
-let g:lightline = { 'colorscheme': 'onedark', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai, landscape, onedark, monokai_pro
+let g:lightline = { 'colorscheme': 'deus', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai, landscape, onedark, monokai_pro, deus, atlas
 
 " Make comments italic
 highlight Comment cterm=italic gui=italic
@@ -303,7 +316,6 @@ nnoremap <leader>w <C-w>
 
 " Set transparent background
 hi Normal guibg=NONE ctermbg=NONE
-
 let g:indentLine_char = '│'
 
 " Use Tab and Shift+Tab to move between buffers
@@ -312,3 +324,4 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 
 " Use :w!! to write to a file using sudo if you forgot to "sudo vim file"
 cmap w!! %!sudo tee > /dev/null %
+
