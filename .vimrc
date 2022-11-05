@@ -107,6 +107,7 @@ Plug 'phanviet/vim-monokai-pro' " monokai_pro
 Plug 'ajmwagar/vim-deus' " deus
 Plug 'jaredgorski/spacecamp' " spacecamp or spacecamp_lite
 Plug 'huyvohcmc/atlas.vim' " atlas
+Plug 'wuelnerdotexe/vim-enfocado' " enfocado
 
 " Language pack
 Plug 'sheerun/vim-polyglot'
@@ -196,10 +197,11 @@ let g:sonokai_disable_italic_comment = 0
 
 " Other colorschemes configurations
 let g:vim_monokai_tasty_italic = 1
+let g:enfocado_style = 'nature' " Available: nature or neon
 
 " autocmd CursorHold * silent call CocActionAsync('highlight')
 
-colorscheme deus
+colorscheme enfocado
 
 let g:deus_termcolors=256
 
@@ -208,7 +210,7 @@ let g:deus_termcolors=256
 
 set laststatus=2
 set noshowmode
-let g:lightline = { 'colorscheme': 'deus', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai, landscape, onedark, monokai_pro, deus, atlas
+let g:lightline = { 'colorscheme': 'enfocado', } " available: monokai_tasty, srcery, tokyonight, tender, sonokai, landscape, onedark, monokai_pro, deus, atlas, enfocado
 
 " Make comments italic
 highlight Comment cterm=italic gui=italic
@@ -315,7 +317,7 @@ nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>w <C-w>
 
 " Set transparent background
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 let g:indentLine_char = '│'
 
 " Use Tab and Shift+Tab to move between buffers
@@ -325,3 +327,5 @@ nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :wri
 " Use :w!! to write to a file using sudo if you forgot to "sudo vim file"
 cmap w!! %!sudo tee > /dev/null %
 
+" Use Ctrl+D to forward delete while in insert mode
+inoremap <C-d> <Del>

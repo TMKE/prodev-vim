@@ -65,9 +65,10 @@ To use these plugins correctly, consider reading their documentation
 - [simpleblack](https://github.com/lucasprag/simpleblack) 
 - [onedark.vim](https://github.com/joshdick/onedark.vim) 
 - [vim-monokai-pro](https://github.com/phanviet/vim-monokai-pro)
-- [vim-deus](https://github.com/ajmwagar/vim-deus) (default)
+- [vim-deus](https://github.com/ajmwagar/vim-deus) 
 - [spacecamp](https://github.com/jaredgorski/spacecamp)
 - [atlas.vim](https://github.com/huyvohcmc/atlas.vim)
+- [vim-enfocado](https://github.com/wuelnerdotexe/vim-enfocado) (default)
 ## Key Mappings
 ### Normal Mode
 - The leader key (`<leader>`) is remaped to `,` instead of `\`.
@@ -89,3 +90,4 @@ To use these plugins correctly, consider reading their documentation
 ### Insert Mode
 - `Ctrl`+`k`/`j`: move current line up/down
 - `Tab`: indent (`Tab`+`Shift` to unindent)
+- `Ctrl` + `d`: forward delete
