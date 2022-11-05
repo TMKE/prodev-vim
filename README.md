@@ -1,5 +1,5 @@
 <p align=center>
-	<img src="logo.png" width=25%>
+	<img src="logo.png" width=100%>
 </p>
 
 <h1 align="center">The Essential vimrc for Developers</h1>
