@@ -19,7 +19,7 @@ Type the following command inside Vim in order to install plugins:
 :PlugInstall
 ```
 ## Screenshots
-<img src="Screenshot_3.png">
+<img src="screenshot.png">
 
 ## Included Plugins
 To use these plugins correctly, consider reading their documentation
